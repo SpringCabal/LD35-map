@@ -100,16 +100,16 @@ local mapinfo = {
 		--grassShadingTex = "",
 		--detailTex = "",
 		--specularTex = "",
-		--splatDetailTex = "",
-		--splatDistrTex = "",
+		splatDetailTex = "splat.bmp",
+		splatDistrTex = "splatdistribution.bmp",
 		--skyReflectModTex = "",
 		--detailNormalTex = "",
 		--lightEmissionTex = "",
 	},
 
 	splats = {
-		texScales = {0.02, 0.02, 0.02, 0.02},
-		texMults  = {1.0, 1.0, 1.0, 1.0},
+    texScales = {0.01, 0.02, 0.0001, 0.02},
+    texMults  = {1.00, 1.50, 3.00, 1.00},
 	},
 
 	atmosphere = {
