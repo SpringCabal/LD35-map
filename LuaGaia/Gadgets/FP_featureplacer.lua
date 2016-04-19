@@ -67,11 +67,13 @@ if ( featurecfg ) then
 	if ( buildinglist ) then
 		local los_status = {los=true, prevLos=true, contRadar=true, radar=true}
 		for i,bDef in pairs(buildinglist) do
-			local flagID = CreateUnit(bDef.name, bDef.x, 0, bDef.z, bDef.rot, gaiaID)
-			SetUnitNeutral(flagID,true)
-			Spring.SetUnitLosState(flagID,0,los_status)
-			SetUnitAlwaysVisible(flagID,true)
-			SetUnitBlocking(flagID,true)
+			if bDef ~= "gatesmoth" then
+				local flagID = CreateUnit(bDef.name, bDef.x, 0, bDef.z, bDef.rot, gaiaID)
+				SetUnitNeutral(flagID,true)
+				Spring.SetUnitLosState(flagID,0,los_status)
+				SetUnitAlwaysVisible(flagID,true)
+				SetUnitBlocking(flagID,true)
+			end
 		end
 	end
 end
